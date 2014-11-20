@@ -3,6 +3,13 @@ HARproject
 
 repo for DSS Coursera Getting & Cleaning Data course project
 
+README file for UCI HAR Data Cleanup
+Version 1.0
+
+November 20, 2014
+
+written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
+
 ## Overview
 This readme file describes the  `run_analysis.R` script including the requirements for running the script, the data processing that occurs and the final output.
 
