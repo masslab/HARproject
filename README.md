@@ -3,6 +3,11 @@ HARproject
 
 repo for DSS Coursera Getting & Cleaning Data course project
 
+## Overview
+This readme file describes the  `run_analysis.R` script including the requirements for running the script, the data processing that occurs and the final output.
+
+Please see the CodeBook for details on the data cleaning and transformations as well as variables and data structures.
+
 ## Required Files, Environment & Packages
 The following are required:
 
