@@ -54,12 +54,19 @@ The following operations are performed:
 
 #### Original Variable Names are Transformed
 The variable names in the test and train data sets were changed according to the following rules:
+
 1. `make.names()` was applied to remove reserved words and illegal characters
+
 2. Leading 't' prefixes  were changed to 'Total'
+
 3. Leading 'f' prefixes were changed to 'FFT' (for fast Fourier transform)
+
 4. Trailing lowercase 'mean' was changed to 'Mean' for increased readability
+
 5. Trailing lowercase 'std' was changed to 'STD for increased readability
+
 6. The resulting variable names were 'cleaned' to remove internal periods and trailing elipses (some of these were artifacts of the `make.names()` operation)
+
 7. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
 
