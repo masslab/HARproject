@@ -63,9 +63,9 @@ The variable names in the test and train data sets were changed according to the
 
 4. Trailing lowercase 'mean' was changed to 'Mean' for increased readability
 
-5. Trailing lowercase 'std' was changed to 'STD for increased readability
+5. Trailing lowercase 'std' was changed to 'STD' for increased readability
 
-6. The resulting variable names were 'cleaned' to remove internal periods and trailing elipses (some of these were artifacts of the `make.names()` operation)
+6. The resulting variable names were *cleaned* to remove internal periods and trailing elipses (some of these were artifacts of the `make.names()` operation)
 
 7. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
