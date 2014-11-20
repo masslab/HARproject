@@ -15,10 +15,10 @@ The following are required files:
 ### Data Files
 - The complete Human Activity Recognition Using Smartphones Dataset available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
--The Data Files should be in a subdirectory called UCI HAR Dataset in the working directory
+- The Data Files should be in a subdirectory called `UCI HAR Dataset` in the working directory
 
 ### Scripts
-- run_analysis.R script available on gitHub https://github.com/masslab/HARproject
+- `run_analysis.R` script available on gitHub https://github.com/masslab/HARproject
 
 - The script should be in the working directory
 
