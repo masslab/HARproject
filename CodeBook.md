@@ -6,7 +6,7 @@ November 20, 2014
 written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 
 ## Overview
-
+This project required the creation of a script to perform general clean-up of the UCI HAR dataset, recombining several individual datasets contained therein, reduction of the scope and reorganization of the resulting dataset and then reporting aggregate data. The principle processing done cleans-up and renames the variables (see below for details) and then subsets only the mean and standard deviation data to produce a reduced dimension aggregate data frame that contains means for each activity by each subject.
 
 
 ## Required Files, Environment & Packages
@@ -29,11 +29,6 @@ The following are required files:
 - plyr
 
 The script will check to see if they are installed.  If they are it will load them.  If not it will install them automatically from CRAN.
-
-
-## Processing
-The script reads the test and train data, the features and activity labels and appends the training data to the testing data.  It cleans-up and renames the variables (see below for details). It then subsets only the mean and standard deviation data to produce a reduced dimension aggregate data frame that contains means for each activity by each subject.
-
 
 ## Variables & Data
 The following data frames are created by the script (in alphabetical order):
