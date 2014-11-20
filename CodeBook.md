@@ -1,6 +1,8 @@
 # Code Book for UCI HAR Data Cleanup
 Version 1.0
+
 November 20, 2014
+
 written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 
 ## Overview
@@ -8,12 +10,25 @@ written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 
 
 ## Required Files, Environment & Packages
-The following are required files for the run_analysis R-script:
+The following are required files:
 
 ### Data Files
 - The complete Human Activity Recognition Using Smartphones Dataset available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+-The Data Files should be in a subdirectory called UCI HAR Dataset in the working directory
+
 ### Scripts
-- run_analysis.R script available on gitHub 
+- run_analysis.R script available on gitHub https://github.com/masslab/HARproject
+
+- The script should be in the working directory
+
+### Packages
+run_analysis.R requires the following R packages:
+
+- dplyr
+- plyr
+
+The script will check to see if they are installed.  If they are it will load them.  If not it will install them automatically from CRAN.
 
 
 ## Processing
