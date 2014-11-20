@@ -8,46 +8,46 @@ written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 ## Overview
 This project required the creation of a script to perform general clean-up of the UCI HAR dataset, recombining several individual datasets contained therein, reduction of the scope and reorganization of the resulting dataset and then reporting aggregate data. The principle processing cleans-up and renames the variables in the data set (see below for details) and then subsets only the mean and standard deviation data to produce a reduced dimension aggregate data frame that contains means for each activity by each subject.
 
+### Original Study Design
+The original study used 30 test subjects performing six activities while wearing a Samsung Galaxy smartphone with an accelerometer and gyroscope.  Data were recorded during the activities to capture 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
 
-## Variables & Data
-The following data frames are created by the script (in alphabetical order):
+For each subject the following data were collected:
 
-- activity (contains `activity_labels.txt`)
-- AlmostTidyData (intermediate for creating final output)
-- combinedDF (intermediate for creating `AmostTidyData`)
-- features (contains `features.txt`)
-- mstd (for mean and sd variables only)
-- nameKey (a convenience feature for referencing new names to original names)
-- newDF (combines the testing and training data)
-- newFeatures (for making the `nameKey`)
-- newSubject (for adding subjects to the combined data frame)
-- newY (for adding the activities to the combined data frame)
-- subject_test (for adding test subjects to `newSubject`)
-- subject_train (for adding training subjects to `newSubject`)
-- testDF (contains `X_test.txt`)
-- tidyData (final output)
-- trainDF (contains `X_train.txt`)
-- y_test (contains `y_test.txt`)
-- y_train (contains `y_train.txt`)
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
 
-The following variables are created by the script (in alphabetical order):
+For more details, see the README.txt file included in the original UCI HAR data set.
 
-- activityName [chr] vector containing activity labels from activity data frame
-- activityNum [int] vector containing the numeric codes from activity data frame
-- badNames [Factor] containing the original variable names from X_test (header)
-- bigBodyNames [chr] used for removing 'BodyBody' typo from variable names
-- bigfNames [chr] used for converting 'f' to 'FFT' in variable names
-- bigGoodNames [chr] used for storing the entire 561 variables after transformations
-- bigMeans [chr] used for converting 'mean' to 'Mean'
-- bigNoPeriods [chr] used for removing internal periods and terminal elipes
-- bigtNames [chr] used for converting 't' to 'Total' in variable names
-- cols2 [chr] used for creating column headers in almostTidyData
-- dots [List] used for aggregating final output
-- legalNames [chr] holds output from `make.names()`
-- namedActivities [chr] holds activities from activityName applied to entire data set
-- newActivityCode [int] hold activity codes from entire data set before converting to names
-- newSubjectCode [int] holds subject codes for entire data set
-- reducedNames [chr] variable names used for mstd data frame used for nameKey
+## Original Data Set
+The original data in the UCI HAR Data set contains the following files:
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+- 'test/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'test/Inertial Signals/: **nothing in this subdirectory is used**
+
+- 'train/Inertial Signals/: **nothing in this subdirectory is used**
+
 
 ## Transformations & Processing
 The following operations are performed:
@@ -75,6 +75,12 @@ The variable names in the test and train data sets were changed according to the
 The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) that are in the final data set as rows.  The first column indicates the original variable column number [1:561] while the second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly understand which variables in the resulting output files correspond to which variables in the original data set.
 
 **Note** The column headers in the final output (the variable names) are not identical to the names in `nameKey` in one respect only: the variable name is prepended by 'mean' and enclosed in parentheses to indicate that these are averages of that variable.
+
+#### Test and Train Data are Merged into a Single Data Set
+
+#### Variables which -**do not**- have Means and Standard Deviations are Excluded
+
+#### Test and Train Data are Merged into a Single Data Set
 
 
 ## Output
