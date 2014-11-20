@@ -78,9 +78,11 @@ The script creates a key called `nameKey.txt` which is part of the output (see O
 
 #### Test and Train Data are Merged into a Single Data Set
 
-#### Variables which -**do not**- have Means and Standard Deviations are Excluded
+#### Activity Codes are Replaced with Activity Names
 
-#### Test and Train Data are Merged into a Single Data Set
+#### Variables which *do not* have Means and Standard Deviations are Excluded
+
+#### The Resulting Data are Grouped by Subject and Activity and then Averaged
 
 
 ## Output
