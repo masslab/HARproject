@@ -116,13 +116,13 @@ The script creates a tidy data set in wide format that is written to a file name
 To read the `tidyData.txt` file back into R, use the following:
 
 ````R
-tidyDataFile <- read.table("tidyFiles/tidyData.txt, header = TRUE")
+tidyDataFile <- read.table("tidyFiles/tidyData.txt", header = TRUE)
 View(tidyDataFile)
 ````
 To read the `nameKey.txt` file back into R, use the following:
 
 ````R
-nameKeyFile <- read.table("tidyFiles/nameKey.txt, header = TRUE")
+nameKeyFile <- read.table("tidyFiles/nameKey.txt", header = TRUE")
 View(nameKeyFile)
 ````
 
