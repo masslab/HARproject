@@ -100,7 +100,7 @@ The following variables are created by the script (in alphabetical order):
 - *bigNoPeriods* [chr] used for removing internal periods and terminal elipes
 - *bigtNames* [chr] used for converting 't' to 'Total' in variable names
 - *cols2* [chr] used for creating column headers in almostTidyData
-- *dots* [list] used for aggregating final output
+- *smCall* [list] used for aggregating final output
 - *legalNames* [chr] holds output from `make.names()`
 - *namedActivities* [chr] holds activities from activityName applied to entire data set
 - *newActivityCode* [int] hold activity codes from entire data set before converting to names
@@ -110,12 +110,15 @@ The following variables are created by the script (in alphabetical order):
 **Note** Many of the data frames and variables in the script are created to preserve intermediate processing steps and could have been eliminated (and would be if this was optimized).  They were left in the code to permit troubleshooting and debugging.  For example, almost all of the Name variables (bigBodyNames, bigfNames, bigtNames, etc) could have been collapsed into a single variable that is reused for each subsequent step.  Elegance and concision were not a priority over working code that was easy to debug.
 
 ## Output
-The script creates a tidy data set in wide format that is written to a file named 'tidyData.txt'.  The data set is 88 columns by 180 rows (and is described in detail in the CodeBook).  In addition, a file named 'nameKey.txt' is also written.  This is for cross-referencing the new variable names with their original names (and is also described in detail in the CodeBook).  Both files are written to a subdirectory named 'tidyFiles' which the script creates in the working directory.  If the script is run multiple times, a warning message will be generated stating that the 'tidyFiles' directory already exists, but the script will continue running.
+The script creates a tidy data set in wide format that is written to a file named 'tidyData.txt'.  The data set is 88 columns by 180 rows (and is described in detail in the CodeBook).  In addition, a file named 'nameKey.txt' is also written.  This is for cross-referencing the new variable names with their original names (and is also described in detail in the CodeBook).  Both files are written to a directory named 'tidyFiles' which the script creates in the working directory.  If the script is run multiple times, a warning message will be generated stating that the 'tidyFiles' directory already exists, but the script will continue running and over-write the existing files.  If you do rerun the script, you may want to change the name of the previously created tidyFiles directory if you want to preserve the files. 
 
+## Reading the files back into R
+To read the `tidyData.txt` file back into R, use the following:
 
-
-
-
+````R
+tidyData <- read.table("tidyFiles/tidyData.txt, header = TRUE")
+View(tidyData)
+````
 
 
 
