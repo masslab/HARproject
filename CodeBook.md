@@ -72,13 +72,13 @@ The variable names in the test and train data sets were changed according to the
 8. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
 ##### Variable name key
-The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) that are in the final data set as rows.  The first column indicates the original variable column number [1:561] while the second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly understand which variables in the resulting output files correspond to which variables in the original data set.
+The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) from the original data set that are included in the tidyData output.  The first column indicates the original variable column number [1:561] while the second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly understand which variables in the resulting output files correspond to which variables in the original data set.
 
 **Note** The column headers in the final output (see the Variable Map Table below) are not identical to the names in `nameKey` in two respects: 
 
-1. the variable name is prepended by 'mean' and enclosed in parentheses to indicate that these are averages of that variable
+1. the variable name in the output is prepended by 'mean' and enclosed in parentheses to indicate that these are averages of that variable
 
-2. the Activity and Subject columns are not represented
+2. the Activity and Subject columns are not represented in the nameKey file
 
 See the Variable Map table below for a complete description of the variables in the `tidyData.txt` output.
 
