@@ -149,7 +149,7 @@ The following table maps all of the variables in the `tidyData.txt` file to thei
 |35|214 |tGravityAccMag-mean() |TotalGravityAccMagMean|   [num]1 |
 |36|215 |tGravityAccMag-std() |TotalGravityAccMagSTD|   [num]1 |
 |37|227 |tBodyAccJerkMag-mean() |TotalBodyAccJerkMagMean|   [num]1 |
-|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD| mean(name)|  [num]1 |
+|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD|[num]1|
 |39|240 |tBodyGyroMag-mean() |TotalBodyGyroMagMean|  [num]1 |
 |40|241 |tBodyGyroMag-std() |TotalBodyGyroMagSTD|  [num]1 |
 |41|253 |tBodyGyroJerkMag-mean() |TotalBodyGyroJerkMagMean|  [num]1 |
