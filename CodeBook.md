@@ -6,7 +6,7 @@ November 20, 2014
 written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 
 ## Overview
-This project required the creation of a script to perform general clean-up of the UCI HAR dataset, recombining several individual datasets contained therein, reduction of the scope and reorganization of the resulting dataset and then reporting aggregate data. The principle processing cleans-up and renames the variables in the data set (see below for details) and then subsets only the mean and standard deviation data to produce a reduced dimension aggregate data frame that contains means for each activity by each subject.
+This project required the creation of a script to perform general clean-up of the UCI HAR dataset, recombining several individual datasets contained therein, reduction of the scope and reorganization of the resulting dataset and then reporting aggregate data. The `run_analysis.R` script cleans-up and renames the variables in the data set (see below for details). It then subsets only the mean and standard deviation data. The output is a reduced dimension aggregate data frame that contains means for each activity by each subject.
 
 ### Original Study Design
 The original study used 30 test subjects performing 6 activities while wearing a Samsung Galaxy SII smartphone with an accelerometer and gyroscope.  Data were recorded during the activities to capture 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
