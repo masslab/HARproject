@@ -107,7 +107,7 @@ This text file is the main output of the script and contains 180 observations of
 
 ##### Map of Variables
 | Col |Original Col  |  Original Name   |  New Name        | Displayed As | Values |
-|:----|:--------- | :------------| -----------: | ------:| ------:|
+|:----|:--------- | :------------| :----------- | :------| :------|
 |1 |NA | NA | Activity | Activity | 6 |
 |2|NA | NA | Subject | Subject | 30 |
 |3|1 |tBodyAcc-mean()-X |TotalBodyAccMeanX| mean() | Rational |
@@ -144,10 +144,10 @@ This text file is the main output of the script and contains 180 observations of
 |34|202 |tBodyAccMag-std() |TotalBodyAccMagSTD| mean() |  Rational |
 |35|214 |tGravityAccMag-mean() |TotalGravityAccMagMean| mean() |  Rational |
 |36|215 |tGravityAccMag-std() |TotalGravityAccMagSTD| mean() |  Rational |
-|37|227 |tBodyAccJerkMag-mean() |TotalBodyAccJerkMagMean|| mean()  Rational |
-|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD|| mean()  Rational |
-|39|240 |tBodyGyroMag-mean() |TotalBodyGyroMagMean|| mean()  Rational |
-|40|241 |tBodyGyroMag-std() |TotalBodyGyroMagSTD|| mean()  Rational |
+|37|227 |tBodyAccJerkMag-mean() |TotalBodyAccJerkMagMean| mean() |  Rational |
+|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD| mean()|  Rational |
+|39|240 |tBodyGyroMag-mean() |TotalBodyGyroMagMean| mean() | Rational |
+|40|241 |tBodyGyroMag-std() |TotalBodyGyroMagSTD| mean() | Rational |
 |41|253 |tBodyGyroJerkMag-mean() |TotalBodyGyroJerkMagMean| mean() | Rational |
 |42|254 |tBodyGyroJerkMag-std() |TotalBodyGyroJerkMagSTD| mean() | Rational |
 |43|266 |fBodyAcc-mean()-X |FFTBodyAccMeanX| mean() | Rational |
