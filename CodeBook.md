@@ -114,7 +114,7 @@ The following table maps all of the variables in the `tidyData.txt` file to thei
 
 | Col# |Var#  |  Original Name   |  New Name        | Displayed As | Values   |
 |:----|:----|:------------|:----------- |:------|:---------|
-|1 |NA | NA | Activity | Activity |[chr] 1|
+|1 |NA | NA | Activity | Activity |[chr] 6|
 |2|NA | NA | Subject | Subject |[int] 30|
 |3|1 |tBodyAcc-mean()-X |TotalBodyAccMeanX| mean(name) | [num]1 |
 |4|2 |tBodyAcc-mean()-Y |TotalBodyAccMeanY| mean(name) | [num]1 | 
