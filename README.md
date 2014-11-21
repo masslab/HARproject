@@ -72,10 +72,11 @@ The following data frames are created in the script (in alphabetical order):
 
 - *activity* (contains `activity_labels.txt`)
 - *AlmostTidyData* (intermediate for creating final output)
+- *bigNameKey* (comparison of all 561 old and new variable names)
 - *combinedDF* (intermediate for creating `AlmostTidyData`)
 - *features* (contains `features.txt`)
 - *mstd* (for mean and sd variables only)
-- *nameKey* (a convenience feature for referencing new names to original names)
+- *nameKey* (86 variable names for referencing new names to original names)
 - *newDF* (combines the testing and training data)
 - *newFeatures* (for making the `nameKey`)
 - *newSubject* (for adding subjects to the combined data frame)
@@ -98,6 +99,7 @@ The following variables are created by the script (in alphabetical order):
 - *bigGoodNames* [chr] used for storing the entire 561 variables after transformations
 - *bigMeans* [chr] used for converting 'mean' to 'Mean'
 - *bigNoPeriods* [chr] used for removing internal periods and terminal elipes
+- *bigRows* [int] used for row numbers in nameKey
 - *bigtNames* [chr] used for converting 't' to 'Total' in variable names
 - *cols2* [chr] used for creating column headers in almostTidyData
 - *smCall* [list] used for aggregating final output
