@@ -72,7 +72,7 @@ The variable names in the test and train data sets were changed according to the
 8. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
 ###### Variable name key
-The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) from the original data set that are included in the tidyData output.  The first column the original variable column number [1:561] while the second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly understand which variables in the resulting output files correspond to which variables in the original data set.
+The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) from the original data set that are included in the tidyData output.  The first column contains the original variable column number [1:561]. The second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly see which variables in the resulting output files correspond to which variables in the original data set.
 
 **Note** The column headers in the final output (see the Variable Map Table below) are not identical to the names in `nameKey` in one respect only: 
 
