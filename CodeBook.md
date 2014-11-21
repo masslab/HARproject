@@ -52,7 +52,7 @@ The original data in the UCI HAR Data set contains the following files:
 ## Transformations & Processing
 The following operations are performed:
 
-#### Original Variable Names are Transformed
+##### Original Variable Names are Transformed
 The variable names in the test and train data sets were changed according to the following rules:
 
 1. Reserved words and illegal characters were removed (replaced with periods and elipses)
@@ -71,7 +71,7 @@ The variable names in the test and train data sets were changed according to the
 
 8. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
-##### Variable name key
+###### Variable name key
 The script creates a key called `nameKey.txt` which is part of the output (see Output below).  This key lists all 86 variables (columns) from the original data set that are included in the tidyData output.  The first column indicates the original variable column number [1:561] while the second column contains the original name and the third column contains the transformed name. This is for convenience only and will permit the researcher/analyst to clearly understand which variables in the resulting output files correspond to which variables in the original data set.
 
 **Note** The column headers in the final output (see the Variable Map Table below) are not identical to the names in `nameKey` in two respects: 
@@ -82,19 +82,19 @@ The script creates a key called `nameKey.txt` which is part of the output (see O
 
 See the Variable Map table below for a complete description of the variables in the `tidyData.txt` output.
 
-#### Test and Train Data are Merged into a Single Data Set
+##### Test and Train Data are Merged into a Single Data Set
 The *test* data consists of 2,947 observations of 561 variables.  The *train* data consists of 7,352 observations of the same 561 variables.  These are merged (*train* was appended to *test*).
 
-#### The Subject and Activity Data are Appended to the Merged Data
+##### The Subject and Activity Data are Appended to the Merged Data
 The subject and activity data were originally maintained as separate files from the recorded measurements.  These are added as additional variables (columns).
 
-#### Activity Codes are Replaced with Activity Names
+##### Activity Codes are Replaced with Activity Names
 The original data set used numeric codes for activities.  The codes are replaced by the actual activity names.
 
-#### Variables that *are not* Means or Standard Deviations are Excluded
+##### Variables that *are not* Means or Standard Deviations are Excluded
 86 of the 561 variables in the original data set were summary data (either means or standard deviations) of other variables.  These summary variables are maintained and the remaining 475 variables are excluded.
 
-#### The Resulting Data are Grouped by Subject and Activity and then Averaged
+##### The Resulting Data are Grouped by Subject and Activity and then Averaged
 The merged, appended and cleaned data are then analyzed by calculating the mean for each variable after grouping by Activity and Subject.  The result is a data set of 180 observations (30 subjects by 6 activities) of 88 variables (the 86 original summary variables plus Activity and Subject).
 
 ## Output
