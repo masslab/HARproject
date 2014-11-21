@@ -107,7 +107,7 @@ This text file is the main output of the script and contains 180 observations of
 
 ##### Map of Variables
 | Col |Original Col  |  Original Name   |  New Name        | Displayed As | Values |
-|:----|:----- | :---------------- | ----------------: | ----------------------:| -----------:|
+|:----|:--------- | :------------| -----------: | ------:| ------:|
 |1 |NA | NA | Activity | Activity | 6 |
 |2|NA | NA | Subject | Subject | 30 |
 |3|1 |tBodyAcc-mean()-X |TotalBodyAccMeanX| mean() | Rational |
@@ -172,30 +172,30 @@ This text file is the main output of the script and contains 180 observations of
 |62|425 |fBodyGyro-mean()-Y |FFTBodyGyroMeanY|mean() | Rational |
 |63|426 |fBodyGyro-mean()-Z |FFTBodyGyroMeanZ|mean() | Rational |
 |64|427 |fBodyGyro-std()-X |FFTBodyGyroSTDX|mean() | Rational |
-|65|428 |fBodyGyro-std()-Y |FFTBodyGyroSTDY|
-|66|429 |fBodyGyro-std()-Z |FFTBodyGyroSTDZ|
-|67|452 |fBodyGyro-meanFreq()-X |FFTBodyGyroMeanFreqX|
-|68|453 |fBodyGyro-meanFreq()-Y |FFTBodyGyroMeanFreqY|
-|69|454 |fBodyGyro-meanFreq()-Z |FFTBodyGyroMeanFreqZ|
-|70|503 |fBodyAccMag-mean() |FFTBodyAccMagMean|
-|71|504 |fBodyAccMag-std() |FFTBodyAccMagSTD|
-|72|513 |fBodyAccMag-meanFreq() |FFTBodyAccMagMeanFreq|
-|73|516 |fAccJerkMag-mean() |FFTBodyAccJerkMagMean|
-|74|517 |fAccJerkMag-std() |FFTBodyAccJerkMagSTD|
-|75|526 |fAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq|
-|76|529 |fGyroMag-mean() |FFTBodyGyroMagMean|
-|77|530 |fGyroMag-std() |FFTBodyGyroMagSTD|
-|78|539 |fGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq|
-|79|542 |fGyroJerkMag-mean() |FFTBodyGyroJerkMagMean|
-|80|543 |fGyroJerkMag-std() |FFTBodyGyroJerkMagSTD|
-|81|552 |fGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq|
-|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity|
-|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean|
-|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean|
-|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean|
-|86|559 |angle(X,gravityMean) |angleXgravityMean|
-|87|560 |angle(Y,gravityMean) |angleYgravityMean|
-|88|561 |angle(Z,gravityMean) |angleZgravityMean|
+|65|428 |fBodyGyro-std()-Y |FFTBodyGyroSTDY|mean() | Rational |
+|66|429 |fBodyGyro-std()-Z |FFTBodyGyroSTDZ|mean() | Rational |
+|67|452 |fBodyGyro-meanFreq()-X |FFTBodyGyroMeanFreqX|mean() | Rational |
+|68|453 |fBodyGyro-meanFreq()-Y |FFTBodyGyroMeanFreqY|mean() | Rational |
+|69|454 |fBodyGyro-meanFreq()-Z |FFTBodyGyroMeanFreqZ|mean() | Rational |
+|70|503 |fBodyAccMag-mean() |FFTBodyAccMagMean|mean() | Rational |
+|71|504 |fBodyAccMag-std() |FFTBodyAccMagSTD|mean() | Rational |
+|72|513 |fBodyAccMag-meanFreq() |FFTBodyAccMagMeanFreq|mean() | Rational |
+|73|516 |fAccJerkMag-mean() |FFTBodyAccJerkMagMean|mean() | Rational |
+|74|517 |fAccJerkMag-std() |FFTBodyAccJerkMagSTD|mean() | Rational |
+|75|526 |fAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq|mean() | Rational |
+|76|529 |fGyroMag-mean() |FFTBodyGyroMagMean|mean() | Rational |
+|77|530 |fGyroMag-std() |FFTBodyGyroMagSTD|mean() | Rational |
+|78|539 |fGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq|mean() | Rational |
+|79|542 |fGyroJerkMag-mean() |FFTBodyGyroJerkMagMean|mean() | Rational |
+|80|543 |fGyroJerkMag-std() |FFTBodyGyroJerkMagSTD|mean() | Rational |
+|81|552 |fGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq|mean() | Rational |
+|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity|mean() | Rational |
+|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean|mean() | Rational |
+|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean|mean() | Rational |
+|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean|mean() | Rational |
+|86|559 |angle(X,gravityMean) |angleXgravityMean|mean() | Rational |
+|87|560 |angle(Y,gravityMean) |angleYgravityMean|mean() | Rational |
+|88|561 |angle(Z,gravityMean) |angleZgravityMean|mean() | Rational |
 
 
 #### nameKey.txt
