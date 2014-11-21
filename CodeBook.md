@@ -28,17 +28,17 @@ The original data in the UCI HAR Data set contains the following files:
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 
-- 'features.txt': List of all features.
+- 'features.txt': List of all features (561 variable names).
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+- 'activity_labels.txt': Links the class labels with their activity name (name-value key with 6 activities).
 
-- 'train/X_train.txt': Training set.
+- 'train/X_train.txt': Training set (feature data for the 561 variables).
 
-- 'train/y_train.txt': Training labels.
+- 'train/y_train.txt': Training labels (activity codes).
 
-- 'test/X_test.txt': Test set.
+- 'test/X_test.txt': Test set (feature data for the 561 variables).
 
-- 'test/y_test.txt': Test labels.
+- 'test/y_test.txt': Test labels (activity codes).
 
 - 'test/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
@@ -55,7 +55,7 @@ The following operations are performed:
 #### Original Variable Names are Transformed
 The variable names in the test and train data sets were changed according to the following rules:
 
-1. `make.names()` was applied to remove reserved words and illegal characters
+1. Reserved words and illegal characters were removed (replaced with periods and elipses)
 
 2. Leading 't' prefixes  were changed to 'Total'
 
@@ -67,7 +67,7 @@ The variable names in the test and train data sets were changed according to the
 
 6. A pervasive typographical error (BodyBody) was fixed by removing the duplication
 
-7. The resulting variable names were *cleaned* to remove internal periods and trailing elipses (some of these were artifacts of the `make.names()` operation)
+7. The resulting variable names were *cleaned* to remove internal periods and trailing elipses (artifacts of step 1)
 
 8. Trailing 'X', 'Y', and 'Z' were maintained as terminal uppercase letters even though they sometimes decreased readability in order to preserve the cartesian coordinate pertaining to the variable.
 
@@ -79,6 +79,8 @@ The script creates a key called `nameKey.txt` which is part of the output (see O
 1. the variable name is prepended by 'mean' and enclosed in parentheses to indicate that these are averages of that variable
 
 2. the Activity and Subject columns are not represented
+
+See the Variable Map table below for a complete description of the variables in the `tidyData.txt` output.
 
 #### Test and Train Data are Merged into a Single Data Set
 The *test* data consists of 2,947 observations of 561 variables.  The *train* data consists of 7,352 observations of the same 561 variables.  These are merged (*train* was appended to *test*).
