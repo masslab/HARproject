@@ -89,13 +89,13 @@ The code is well commented for following what's happening and why.  Here is a hi
 - test and train data files are read into data frames
 - original variable names are extracted from features as 'badNames'
 - `make.names()` is called to do a first pass cleanup on the variable names
--- this eliminates reserved R words (if any) and illegal characters (lots)
+  - this eliminates reserved R words (if any) and illegal characters (lots)
 - variable names are further cleaned by replacing single letter prefixes with words using GREP (`gsub`)
 - the doubly 'BodyBody' typo is fixed in some of the variable names using GREP
 - suffixes designating mean and std are capitalized using GREP
 - artifacts from `make.names()` are removed using GREP (periods)
 - colnames is used to assign the good names to the entire 561 variable test and train data sets
-- test and train data sets are combined (train is appended to test)
+- test and train data sets are combined (train is appended to test using `rbind`)
 - test and train subject data are combined in same way
 - test and train activity data are combined in same way
 - use dplyr to `select` only variables (columns) that have 'mean' or 'std'
