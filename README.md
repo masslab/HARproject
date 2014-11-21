@@ -82,5 +82,41 @@ The following variables are created by the script (in alphabetical order):
 **Note** Many of the data frames and variables in the script are created to preserve intermediate processing steps and could have been eliminated (and would be if this was optimized).  They were left in the code to permit troubleshooting and debugging.  For example, almost all of the Name variables (bigBodyNames, bigfNames, bigtNames, etc) could have been collapsed into a single variable that is reused for each subsequent step.  Elegance and concision were not a priority over working code that was easy to debug.
 
 ## Data Processing
+The code is well commented for following what's happening and why.  Here is a high level overview:
+
+- Check for `plyr` and `dplyr` packages.  Load or install as necessary.
+- global data for variable names and activities are read into data frames
+- test and train data files are read into data frames
+- original variable names are extracted from features as 'badNames'
+- `make.names()` is called to do a first pass cleanup on the variable names
+-- this eliminates reserved R words (if any) and illegal characters (lots)
+- variable names are further cleaned by replacing single letter prefixes with words using GREP (`gsub`)
+- the doubly 'BodyBody' typo is fixed in some of the variable names using GREP
+- suffixes designating mean and std are capitalized using GREP
+- artifacts from `make.names()` are removed using GREP (periods)
+- colnames is used to assign the good names to the entire 561 variable test and train data sets
+- test and train data sets are combined (train is appended to test)
+- test and train subject data are combined in same way
+- test and train activity data are combined in same way
+- use dplyr to `select` only variables (columns) that have 'mean' or 'std'
+- use dplyr `filter` to create nameKey for only those variables that are included in final data set
+- recode the activity using plyr `mapvalues`
+- `cbind` the activity and subject data to the data frame
+- make an intermediate data frame that is grouped by activity and subject using `group_by`
+- use `lapply` and `summarise` to calculate the averages of each variable by group
+- create subdirectory to contain the output to working directory (tidyFiles)
+- write final output: tidyData.txt
+- write nameKey.txt
+
+
+
+
+
+
+
+
+
+
+
 
 
