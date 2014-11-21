@@ -203,4 +203,4 @@ The following table maps all of the variables in the `tidyData.txt` file to thei
 
 
 #### nameKey.txt
-This text file was described above in detail and is provided for convenience to enable machine-based cross-referencing of the new transformed variable names in the tidy data with the original variable names. It is essentially the same data represented in the table above without the first column (row numbers corresponding to column numbers in `tidyData.txt`), and without the fifth and sixth columns.
+This text file was described above in detail and is provided for convenience to enable machine-based cross-referencing of the new transformed variable names in the tidy data with the original variable names. It is essentially the same data represented in the table above without the first column (row numbers corresponding to column numbers in `tidyData.txt`), and without the fifth and sixth columns (Displayed As and Values).
