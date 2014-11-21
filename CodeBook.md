@@ -112,96 +112,96 @@ This text file is the main output of the script and contains 180 observations of
 ##### Map of Variables
 The following table maps all of the variables in the `tidyData.txt` file to their original names in the HAR data set.  The first column (Col#) refers to the `tidyData` data set.  The second column (Var#) refers to the original data set.  These refer to row numbers in the `features.txt` file which correspond to column numbers in the test and train data files. If the variable was not included in the original set, it is represented as NA.  The third column (Original Name) is the name of the variable in the original HAR data set.  The fourth column (New Name) is the name that resulted from the transformations done by `run_analysis.R`.  The fifth column (Displayed As) is the manner in which the new variable name is displayed in the header of the `tidyData.txt` file.  The 'name' refers to the New Name. The sixth column (Value) is the type of data (*chr* for character; *int* for integer; *num* for double (real numbers)) and the range of values contained in the variable.
 
-| Col# |Var#  |  Original Name   |  New Name        | Displayed As | Values |
-|:----|:----|:------------|:----------- |:------|:------|
+| Col# |Var#  |  Original Name   |  New Name        | Displayed As | Values   |
+|:----|:----|:------------|:----------- |:------|:---------|
 |1 |NA | NA | Activity | Activity |[chr] 1|
 |2|NA | NA | Subject | Subject |[int] 30|
-|3|1 |tBodyAcc-mean()-X |TotalBodyAccMeanX| mean(name) | [num] 1 |
-|4|2 |tBodyAcc-mean()-Y |TotalBodyAccMeanY| mean(name) | [num] 1 | 
-|5|3 |tBodyAcc-mean()-Z |TotalBodyAccMeanZ| mean(name) | [num] 1 |
-|6|4 |tBodyAcc-std()-X |TotalBodyAccSTDX| mean(name) |  [num] 1 |
-|7|5 |tBodyAcc-std()-Y |TotalBodyAccSTDY| mean(name) |  [num] 1 |
-|8|6 |tBodyAcc-std()-Z |TotalBodyAccSTDZ| mean(name) |  [num] 1 |
-|9|41 |tGravityAcc-mean()-X |TotalGravityAccMeanX| mean(name) |  [num] 1 |
-|10|42 |tGravityAcc-mean()-Y |TotalGravityAccMeanY| mean(name) |  [num] 1 |
-|11|43 |tGravityAcc-mean()-Z |TotalGravityAccMeanZ| mean(name) |  [num] 1 |
-|12|44 |tGravityAcc-std()-X |TotalGravityAccSTDX| mean(name) |  [num] 1 |
-|13|45 |tGravityAcc-std()-Y |TotalGravityAccSTDY| mean(name) |  [num] 1 |
-|14|46 |tGravityAcc-std()-Z |TotalGravityAccSTDZ| mean(name) |  [num] 1 |
-|15|81 |tBodyAccJerk-mean()-X |TotalBodyAccJerkMeanX| mean(name) |  [num] 1 |
-|16|82 |tBodyAccJerk-mean()-Y |TotalBodyAccJerkMeanY| mean(name) |  [num] 1 |
-|17|83 |tBodyAccJerk-mean()-Z |TotalBodyAccJerkMeanZ| mean(name) |  [num] 1 |
-|18|84 |tBodyAccJerk-std()-X |TotalBodyAccJerkSTDX| mean(name) |  [num] 1 |
-|19|85 |tBodyAccJerk-std()-Y |TotalBodyAccJerkSTDY| mean(name) |  [num] 1 |
-|20|86 |tBodyAccJerk-std()-Z |TotalBodyAccJerkSTDZ| mean(name) | [num] 1 |
-|21|121 |tBodyGyro-mean()-X |TotalBodyGyroMeanX| mean(name) |  [num] 1 |
-|22|122 |tBodyGyro-mean()-Y |TotalBodyGyroMeanY| mean(name) |  [num] 1 |
-|23|123 |tBodyGyro-mean()-Z |TotalBodyGyroMeanZ| mean(name) |  [num] 1 |
-|24|124 |tBodyGyro-std()-X |TotalBodyGyroSTDX| mean(name) |  [num] 1 |
-|25|125 |tBodyGyro-std()-Y |TotalBodyGyroSTDY| mean(name) |  [num] 1 |
-|26|126 |tBodyGyro-std()-Z |TotalBodyGyroSTDZ| mean(name) |  [num] 1 |
-|27|161 |tBodyGyroJerk-mean()-X |TotalBodyGyroJerkMeanX| mean(name) |  [num] 1 |
-|28|162 |tBodyGyroJerk-mean()-Y |TotalBodyGyroJerkMeanY| mean(name) |  [num] 1 |
-|29|163 |tBodyGyroJerk-mean()-Z |TotalBodyGyroJerkMeanZ| mean(name) |  [num] 1 |
-|30|164 |tBodyGyroJerk-std()-X |TotalBodyGyroJerkSTDX| mean(name) |  [num] 1 |
-|31|165 |tBodyGyroJerk-std()-Y |TotalBodyGyroJerkSTDY| mean(name) |  [num] 1 |
-|32|166 |tBodyGyroJerk-std()-Z |TotalBodyGyroJerkSTDZ| mean(name) |  [num] 1 |
-|33|201 |tBodyAccMag-mean() |TotalBodyAccMagMean| mean(name) |  [num] 1 |
-|34|202 |tBodyAccMag-std() |TotalBodyAccMagSTD| mean(name) |  [num] 1 |
-|35|214 |tGravityAccMag-mean() |TotalGravityAccMagMean| mean(name) |  [num] 1 |
-|36|215 |tGravityAccMag-std() |TotalGravityAccMagSTD| mean(name) |  [num] 1 |
-|37|227 |tBodyAccJerkMag-mean() |TotalBodyAccJerkMagMean| mean(name) |  [num] 1 |
-|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD| mean(name)|  [num] 1 |
-|39|240 |tBodyGyroMag-mean() |TotalBodyGyroMagMean| mean(name) | [num] 1 |
-|40|241 |tBodyGyroMag-std() |TotalBodyGyroMagSTD| mean(name) | [num] 1 |
-|41|253 |tBodyGyroJerkMag-mean() |TotalBodyGyroJerkMagMean| mean(name) | [num] 1 |
-|42|254 |tBodyGyroJerkMag-std() |TotalBodyGyroJerkMagSTD| mean(name) | [num] 1 |
-|43|266 |fBodyAcc-mean()-X |FFTBodyAccMeanX| mean(name) | [num] 1 |
-|44|267 |fBodyAcc-mean()-Y |FFTBodyAccMeanY| mean(name) | [num] 1 |
-|45|268 |fBodyAcc-mean()-Z |FFTBodyAccMeanZ| mean(name) | [num] 1 |
-|46|269 |fBodyAcc-std()-X |FFTBodyAccSTDX| mean(name) | [num] 1 |
-|47|270 |fBodyAcc-std()-Y |FFTBodyAccSTDY| mean(name) | [num] 1 |
-|48|271 |fBodyAcc-std()-Z |FFTBodyAccSTDZ| mean(name) | [num] 1 |
-|49|294 |fBodyAcc-meanFreq()-X |FFTBodyAccMeanFreqX| mean(name) | [num] 1 |
-|50|295 |fBodyAcc-meanFreq()-Y |FFTBodyAccMeanFreqY| mean(name) | [num] 1 |
-|51|296 |fBodyAcc-meanFreq()-Z |FFTBodyAccMeanFreqZ| mean(name) | [num] 1 |
-|52|345 |fBodyAccJerk-mean()-X |FFTBodyAccJerkMeanX| mean(name) | [num] 1 |
-|53|346 |fBodyAccJerk-mean()-Y |FFTBodyAccJerkMeanY| mean(name) | [num] 1 |
-|54|347 |fBodyAccJerk-mean()-Z |FFTBodyAccJerkMeanZ| mean(name) | [num] 1 |
-|55|348 |fBodyAccJerk-std()-X |FFTBodyAccJerkSTDX| mean(name) | [num] 1 |
-|56|349 |fBodyAccJerk-std()-Y |FFTBodyAccJerkSTDY| mean(name) | [num] 1 |
-|57|350 |fBodyAccJerk-std()-Z |FFTBodyAccJerkSTDZ| mean(name) | [num] 1 |
-|58|373 |fBodyAccJerk-meanFreq()-X |FFTBodyAccJerkMeanFreqX| mean(name) | [num] 1 |
-|59|374 |fBodyAccJerk-meanFreq()-Y |FFTBodyAccJerkMeanFreqY| mean(name) | [num] 1 |
-|60|375 |fBodyAccJerk-meanFreq()-Z |FFTBodyAccJerkMeanFreqZ| mean(name) | [num] 1 |
-|61|424 |fBodyGyro-mean()-X |FFTBodyGyroMeanX| mean(name) | [num] 1 |
-|62|425 |fBodyGyro-mean()-Y |FFTBodyGyroMeanY| mean(name) | [num] 1 |
-|63|426 |fBodyGyro-mean()-Z |FFTBodyGyroMeanZ| mean(name) | [num] 1 |
-|64|427 |fBodyGyro-std()-X |FFTBodyGyroSTDX| mean(name) | [num] 1 |
-|65|428 |fBodyGyro-std()-Y |FFTBodyGyroSTDY| mean(name) | [num] 1 |
-|66|429 |fBodyGyro-std()-Z |FFTBodyGyroSTDZ| mean(name) | [num] 1 |
-|67|452 |fBodyGyro-meanFreq()-X |FFTBodyGyroMeanFreqX| mean(name) | [num] 1 |
-|68|453 |fBodyGyro-meanFreq()-Y |FFTBodyGyroMeanFreqY| mean(name) | [num] 1 |
-|69|454 |fBodyGyro-meanFreq()-Z |FFTBodyGyroMeanFreqZ| mean(name) | [num] 1 |
-|70|503 |fBodyAccMag-mean() |FFTBodyAccMagMean| mean(name) | [num] 1 |
-|71|504 |fBodyAccMag-std() |FFTBodyAccMagSTD| mean(name) | [num] 1 |
-|72|513 |fBodyAccMag-meanFreq() |FFTBodyAccMagMeanFreq| mean(name) | [num] 1 |
-|73|516 |fAccJerkMag-mean() |FFTBodyAccJerkMagMean| mean(name) | [num] 1 |
-|74|517 |fAccJerkMag-std() |FFTBodyAccJerkMagSTD| mean(name) | [num] 1 |
-|75|526 |fAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq| mean(name) | [num] 1 |
-|76|529 |fGyroMag-mean() |FFTBodyGyroMagMean| mean(name) | [num] 1 |
-|77|530 |fGyroMag-std() |FFTBodyGyroMagSTD| mean(name) | [num] 1 |
-|78|539 |fGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq| mean(name) | [num] 1 |
-|79|542 |fGyroJerkMag-mean() |FFTBodyGyroJerkMagMean| mean(name) | [num] 1 |
-|80|543 |fGyroJerkMag-std() |FFTBodyGyroJerkMagSTD| mean(name) | [num] 1 |
-|81|552 |fGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq| mean(name) | [num] 1 |
-|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity| mean(name) | [num] 1 |
-|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean| mean(name) | [num] 1 |
-|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean| mean(name) | [num] 1 |
-|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean| mean(name) | [num] 1 |
-|86|559 |angle(X,gravityMean) |angleXgravityMean| mean(name) | [num] 1 |
-|87|560 |angle(Y,gravityMean) |angleYgravityMean| mean(name) | [num] 1 |
-|88|561 |angle(Z,gravityMean) |angleZgravityMean| mean(name) | [num] 1 |
+|3|1 |tBodyAcc-mean()-X |TotalBodyAccMeanX| mean(name) | [num]1 |
+|4|2 |tBodyAcc-mean()-Y |TotalBodyAccMeanY| mean(name) | [num]1 | 
+|5|3 |tBodyAcc-mean()-Z |TotalBodyAccMeanZ| mean(name) | [num]1 |
+|6|4 |tBodyAcc-std()-X |TotalBodyAccSTDX| mean(name) |  [num]1 |
+|7|5 |tBodyAcc-std()-Y |TotalBodyAccSTDY| mean(name) |  [num]1 |
+|8|6 |tBodyAcc-std()-Z |TotalBodyAccSTDZ| mean(name) |  [num]1 |
+|9|41 |tGravityAcc-mean()-X |TotalGravityAccMeanX| mean(name) |  [num]1 |
+|10|42 |tGravityAcc-mean()-Y |TotalGravityAccMeanY| mean(name) |  [num]1 |
+|11|43 |tGravityAcc-mean()-Z |TotalGravityAccMeanZ| mean(name) |  [num]1 |
+|12|44 |tGravityAcc-std()-X |TotalGravityAccSTDX| mean(name) |  [num]1 |
+|13|45 |tGravityAcc-std()-Y |TotalGravityAccSTDY| mean(name) |  [num]1 |
+|14|46 |tGravityAcc-std()-Z |TotalGravityAccSTDZ| mean(name) |  [num]1 |
+|15|81 |tBodyAccJerk-mean()-X |TotalBodyAccJerkMeanX| mean(name) |  [num]1 |
+|16|82 |tBodyAccJerk-mean()-Y |TotalBodyAccJerkMeanY| mean(name) |  [num]1 |
+|17|83 |tBodyAccJerk-mean()-Z |TotalBodyAccJerkMeanZ| mean(name) |  [num]1 |
+|18|84 |tBodyAccJerk-std()-X |TotalBodyAccJerkSTDX| mean(name) |  [num]1 |
+|19|85 |tBodyAccJerk-std()-Y |TotalBodyAccJerkSTDY| mean(name) |  [num]1 |
+|20|86 |tBodyAccJerk-std()-Z |TotalBodyAccJerkSTDZ| mean(name) | [num]1 |
+|21|121 |tBodyGyro-mean()-X |TotalBodyGyroMeanX| mean(name) |  [num]1 |
+|22|122 |tBodyGyro-mean()-Y |TotalBodyGyroMeanY| mean(name) |  [num]1 |
+|23|123 |tBodyGyro-mean()-Z |TotalBodyGyroMeanZ| mean(name) |  [num]1 |
+|24|124 |tBodyGyro-std()-X |TotalBodyGyroSTDX| mean(name) |  [num]1 |
+|25|125 |tBodyGyro-std()-Y |TotalBodyGyroSTDY| mean(name) |  [num]1 |
+|26|126 |tBodyGyro-std()-Z |TotalBodyGyroSTDZ| mean(name) |  [num]1 |
+|27|161 |tBodyGyroJerk-mean()-X |TotalBodyGyroJerkMeanX| mean(name) |  [num]1 |
+|28|162 |tBodyGyroJerk-mean()-Y |TotalBodyGyroJerkMeanY| mean(name) |  [num]1 |
+|29|163 |tBodyGyroJerk-mean()-Z |TotalBodyGyroJerkMeanZ| mean(name) |  [num]1 |
+|30|164 |tBodyGyroJerk-std()-X |TotalBodyGyroJerkSTDX| mean(name) |  [num]1 |
+|31|165 |tBodyGyroJerk-std()-Y |TotalBodyGyroJerkSTDY| mean(name) |  [num]1 |
+|32|166 |tBodyGyroJerk-std()-Z |TotalBodyGyroJerkSTDZ| mean(name) |  [num]1 |
+|33|201 |tBodyAccMag-mean() |TotalBodyAccMagMean| mean(name) |  [num]1 |
+|34|202 |tBodyAccMag-std() |TotalBodyAccMagSTD| mean(name) |  [num]1 |
+|35|214 |tGravityAccMag-mean() |TotalGravityAccMagMean| mean(name) |  [num]1 |
+|36|215 |tGravityAccMag-std() |TotalGravityAccMagSTD| mean(name) |  [num]1 |
+|37|227 |tBodyAccJerkMag-mean() |TotalBodyAccJerkMagMean| mean(name) |  [num]1 |
+|38|228 |tBodyAccJerkMag-std() |TotalBodyAccJerkMagSTD| mean(name)|  [num]1 |
+|39|240 |tBodyGyroMag-mean() |TotalBodyGyroMagMean| mean(name) | [num]1 |
+|40|241 |tBodyGyroMag-std() |TotalBodyGyroMagSTD| mean(name) | [num]1 |
+|41|253 |tBodyGyroJerkMag-mean() |TotalBodyGyroJerkMagMean| mean(name) | [num]1 |
+|42|254 |tBodyGyroJerkMag-std() |TotalBodyGyroJerkMagSTD| mean(name) | [num]1 |
+|43|266 |fBodyAcc-mean()-X |FFTBodyAccMeanX| mean(name) | [num]1 |
+|44|267 |fBodyAcc-mean()-Y |FFTBodyAccMeanY| mean(name) | [num]1 |
+|45|268 |fBodyAcc-mean()-Z |FFTBodyAccMeanZ| mean(name) | [num]1 |
+|46|269 |fBodyAcc-std()-X |FFTBodyAccSTDX| mean(name) | [num]1 |
+|47|270 |fBodyAcc-std()-Y |FFTBodyAccSTDY| mean(name) | [num]1 |
+|48|271 |fBodyAcc-std()-Z |FFTBodyAccSTDZ| mean(name) | [num]1 |
+|49|294 |fBodyAcc-meanFreq()-X |FFTBodyAccMeanFreqX| mean(name) | [num]1 |
+|50|295 |fBodyAcc-meanFreq()-Y |FFTBodyAccMeanFreqY| mean(name) | [num]1 |
+|51|296 |fBodyAcc-meanFreq()-Z |FFTBodyAccMeanFreqZ| mean(name) | [num]1 |
+|52|345 |fBodyAccJerk-mean()-X |FFTBodyAccJerkMeanX| mean(name) | [num]1 |
+|53|346 |fBodyAccJerk-mean()-Y |FFTBodyAccJerkMeanY| mean(name) | [num]1 |
+|54|347 |fBodyAccJerk-mean()-Z |FFTBodyAccJerkMeanZ| mean(name) | [num]1 |
+|55|348 |fBodyAccJerk-std()-X |FFTBodyAccJerkSTDX| mean(name) | [num]1 |
+|56|349 |fBodyAccJerk-std()-Y |FFTBodyAccJerkSTDY| mean(name) | [num]1 |
+|57|350 |fBodyAccJerk-std()-Z |FFTBodyAccJerkSTDZ| mean(name) | [num]1 |
+|58|373 |fBodyAccJerk-meanFreq()-X |FFTBodyAccJerkMeanFreqX| mean(name) | [num]1 |
+|59|374 |fBodyAccJerk-meanFreq()-Y |FFTBodyAccJerkMeanFreqY| mean(name) | [num]1 |
+|60|375 |fBodyAccJerk-meanFreq()-Z |FFTBodyAccJerkMeanFreqZ| mean(name) | [num]1 |
+|61|424 |fBodyGyro-mean()-X |FFTBodyGyroMeanX| mean(name) | [num]1 |
+|62|425 |fBodyGyro-mean()-Y |FFTBodyGyroMeanY| mean(name) | [num]1 |
+|63|426 |fBodyGyro-mean()-Z |FFTBodyGyroMeanZ| mean(name) | [num]1 |
+|64|427 |fBodyGyro-std()-X |FFTBodyGyroSTDX| mean(name) | [num]1 |
+|65|428 |fBodyGyro-std()-Y |FFTBodyGyroSTDY| mean(name) | [num]1 |
+|66|429 |fBodyGyro-std()-Z |FFTBodyGyroSTDZ| mean(name) | [num]1 |
+|67|452 |fBodyGyro-meanFreq()-X |FFTBodyGyroMeanFreqX| mean(name) | [num]1 |
+|68|453 |fBodyGyro-meanFreq()-Y |FFTBodyGyroMeanFreqY| mean(name) | [num]1 |
+|69|454 |fBodyGyro-meanFreq()-Z |FFTBodyGyroMeanFreqZ| mean(name) | [num]1 |
+|70|503 |fBodyAccMag-mean() |FFTBodyAccMagMean| mean(name) | [num]1 |
+|71|504 |fBodyAccMag-std() |FFTBodyAccMagSTD| mean(name) | [num]1 |
+|72|513 |fBodyAccMag-meanFreq() |FFTBodyAccMagMeanFreq| mean(name) | [num]1 |
+|73|516 |fAccJerkMag-mean() |FFTBodyAccJerkMagMean| mean(name) | [num]1 |
+|74|517 |fAccJerkMag-std() |FFTBodyAccJerkMagSTD| mean(name) | [num]1 |
+|75|526 |fAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq| mean(name) | [num]1 |
+|76|529 |fGyroMag-mean() |FFTBodyGyroMagMean| mean(name) | [num]1 |
+|77|530 |fGyroMag-std() |FFTBodyGyroMagSTD| mean(name) | [num]1 |
+|78|539 |fGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq| mean(name) | [num]1 |
+|79|542 |fGyroJerkMag-mean() |FFTBodyGyroJerkMagMean| mean(name) | [num]1 |
+|80|543 |fGyroJerkMag-std() |FFTBodyGyroJerkMagSTD| mean(name) | [num]1 |
+|81|552 |fGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq| mean(name) | [num]1 |
+|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity| mean(name) | [num]1 |
+|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean| mean(name) | [num]1 |
+|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean| mean(name) | [num]1 |
+|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean| mean(name) | [num]1 |
+|86|559 |angle(X,gravityMean) |angleXgravityMean| mean(name) | [num]1 |
+|87|560 |angle(Y,gravityMean) |angleYgravityMean| mean(name) | [num]1 |
+|88|561 |angle(Z,gravityMean) |angleZgravityMean| mean(name) | [num]1 |
 
 
 #### nameKey.txt
