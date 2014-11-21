@@ -15,7 +15,7 @@ This readme file describes the  `run_analysis.R` script including the requiremen
 
 Please see the CodeBook for details on the data cleaning and transformations as well as the scope of the original project, the data set and the variables in the data.
 
-### What `run_analysis.R` does
+### What run_analysis does
 The script takes several separate data files from the UCI HAR data set and merges them into a single data set.  It then cleans the data by transforming the variable names into more a readable and intelligible form and replaces some numeric coding with natural language.  It then analyzes the results and produces a final tidy data set that presents a subset of grouped and aggregated data.
 
 ## Required Files, Environment & Packages
@@ -39,7 +39,7 @@ The following are required:
 
 The script will check to see if they are installed.  If they are available it will load them.  If not it will install them automatically from CRAN.
 
-## Variables & Data in `run_analysis.R`
+## Data Structures & Variables
 The following data frames are created by the script (in alphabetical order):
 
 - activity (contains `activity_labels.txt`)
