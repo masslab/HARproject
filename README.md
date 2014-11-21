@@ -91,7 +91,7 @@ The code is well commented for following what's happening and why.  Here is a hi
 - `make.names()` is called to do a first pass cleanup on the variable names
   - this eliminates reserved R words (if any) and illegal characters (lots)
 - variable names are further cleaned by replacing single letter prefixes with words using GREP (`gsub`)
-- the doubly 'BodyBody' typo is fixed in some of the variable names using GREP
+- the 'BodyBody' typo is fixed in some of the variable names using GREP
 - suffixes designating mean and std are capitalized using GREP
 - artifacts from `make.names()` are removed using GREP (periods)
 - colnames is used to assign the good names to the entire 561 variable test and train data sets
@@ -108,8 +108,10 @@ The code is well commented for following what's happening and why.  Here is a hi
 - write final output: tidyData.txt
 - write nameKey.txt
 
+## Output
+The script creates a tidy data set in wide format that is written to a file named 'tidyData.txt'.  The data set is 88 columns by 180 rows (and is described in detail in the CodeBook).  In addition, a file named 'nameKey.txt' is also written.  This is for cross-referencing the new variable names with their original names (and is also described in detail in the CodeBook).  Both files are written to a subdirectory named 'tidyFiles' which the script creates in the working directory.
 
-
+### END ###
 
 
 
