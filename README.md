@@ -122,7 +122,7 @@ View(tidyDataFile)
 To read the `nameKey.txt` file back into R, use the following:
 
 ````R
-nameKeyFile <- read.table("tidyFiles/nameKey.txt", header = TRUE")
+nameKeyFile <- read.table("tidyFiles/nameKey.txt", header = TRUE)
 View(nameKeyFile)
 ````
 
