@@ -52,7 +52,7 @@ subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", quote="\"
 ########
 ### fix names
 ## extract column names from features
-badNames <- features$V2
+badNames <- (as.character(features$V2))
 ## rename things with valid names & eliminate duplicates
 legalNames <-make.names(badNames, unique=TRUE, allow_ = TRUE)
 ## cleanup the legal names by changing initial 'f' to 'FFT' and 't' to 
@@ -85,11 +85,13 @@ mstd <- select(newDF, contains("Mean"), contains("STD"))
 ## the reduced dataframe of mean and std data
 ## The 'col#' column corresponds to the column# of the 
 ## original data frame [1:561] with the orignal and new names
+bigRows <- 1:561
+bigNameKey <- data.frame(bigRows, badNames, bigGoodNames)
 reducedNames <- colnames(mstd)
-newFeatures <- features
-newFeatures$newNames <- bigGoodNames
+newFeatures <- data.frame(colnames(compareDF))
+newFeatures$newNames <- reducedNames
 ## use dplyr 'filter'
-nameKey <- data.frame(filter(newFeatures, newNames %in% reducedNames))
+nameKey <- data.frame(filter(bigNameKey, bigGoodNames %in% reducedNames))
 colnames(nameKey) <- c("Col#", "originalName", "newName")
 ## end of nameKey code
 ########
@@ -125,6 +127,6 @@ dir.create("tidyFiles")
 ## Write File
 write.table(tidyData, file="tidyFiles/tidyData.txt", row.name=FALSE)
 ## write nameKey
-write.table(nameKey, file="tidyFiles/nameKey.txt")
+write.table(nameKey, file="tidyFiles/nameKey.txt", row.name=FALSE)
 ########### 
 ## END

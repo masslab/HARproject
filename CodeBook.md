@@ -184,22 +184,22 @@ The following table maps all of the variables in the `tidyData.txt` file to thei
 |70|503 |fBodyAccMag-mean() |FFTBodyAccMagMean|  [num]1 |
 |71|504 |fBodyAccMag-std() |FFTBodyAccMagSTD|  [num]1 |
 |72|513 |fBodyAccMag-meanFreq() |FFTBodyAccMagMeanFreq|  [num]1 |
-|73|516 |fAccJerkMag-mean() |FFTBodyAccJerkMagMean|  [num]1 |
-|74|517 |fAccJerkMag-std() |FFTBodyAccJerkMagSTD|  [num]1 |
-|75|526 |fAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq|  [num]1 |
-|76|529 |fGyroMag-mean() |FFTBodyGyroMagMean|  [num]1 |
-|77|530 |fGyroMag-std() |FFTBodyGyroMagSTD|  [num]1 |
-|78|539 |fGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq|  [num]1 |
-|79|542 |fGyroJerkMag-mean() |FFTBodyGyroJerkMagMean|  [num]1 |
-|80|543 |fGyroJerkMag-std() |FFTBodyGyroJerkMagSTD|  [num]1 |
-|81|552 |fGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq|  [num]1 |
-|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity|  [num]1 |
-|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean|  [num]1 |
-|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean|  [num]1 |
-|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean|  [num]1 |
-|86|559 |angle(X,gravityMean) |angleXgravityMean|  [num]1 |
-|87|560 |angle(Y,gravityMean) |angleYgravityMean|  [num]1 |
-|88|561 |angle(Z,gravityMean) |angleZgravityMean|  [num]1 |
+|73|516 |fBodyBodyAccJerkMag-mean() |FFTBodyAccJerkMagMean|[num]1 |
+|74|517 |fBodyBodyAccJerkMag-std() |FFTBodyAccJerkMagSTD|[num]1 |
+|75|526 |fBodyBodyAccJerkMag-meanFreq() |FFTBodyAccJerkMagMeanFreq|[num]1 |
+|76|529 |fBodyBodyGyroMag-mean() |FFTBodyGyroMagMean|[num]1 |
+|77|530 |fBodyBodyGyroMag-std() |FFTBodyGyroMagSTD|[num]1 |
+|78|539 |fBodyBodyGyroMag-meanFreq() |FFTBodyGyroMagMeanFreq|[num]1 |
+|79|542 |fBodyBodyGyroJerkMag-mean() |FFTBodyGyroJerkMagMean|[num]1 |
+|80|543 |fBodyBodyGyroJerkMag-std() |FFTBodyGyroJerkMagSTD|[num]1 |
+|81|552 |fBodyBodyGyroJerkMag-meanFreq() |FFTBodyGyroJerkMagMeanFreq|[num]1 |
+|82|555 |angle(tBodyAccMean,gravity) |angletBodyAccMeangravity|[num]1 |
+|83|556 |angle(tBodyAccJerkMean),gravityMean) |angletBodyAccJerkMeangravityMean|[num]1 |
+|84|557 |angle(tBodyGyroMean,gravityMean) |angletBodyGyroMeangravityMean|[num]1 |
+|85|558 |angle(tBodyGyroJerkMean,gravityMean) |angletBodyGyroJerkMeangravityMean|[num]1 |
+|86|559 |angle(X,gravityMean) |angleXgravityMean|[num]1 |
+|87|560 |angle(Y,gravityMean) |angleYgravityMean|[num]1 |
+|88|561 |angle(Z,gravityMean) |angleZgravityMean|[num]1 |
 
 
 #### nameKey.txt
