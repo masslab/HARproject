@@ -49,9 +49,10 @@ The code is well commented for following what's happening and why.  Here is a hi
 - `make.names()` is called to do a first pass cleanup on the variable names
   - this eliminates reserved R words (if any) and illegal characters (lots)
 - variable names are further cleaned by replacing single letter prefixes with words using GREP (`gsub`)
+	- 't' becomes 'Total' and 'f' becomes 'FFT'
 - the 'BodyBody' typo is fixed in some of the variable names using GREP
 - suffixes designating mean and std are capitalized using GREP
-- artifacts from `make.names()` are removed using GREP (periods)
+- artifacts from `make.names()` are removed using GREP (periods and elipses)
 - `colnames` is used to assign the good names to the entire 561 variable test and train data sets
 - test and train data sets are combined (train is appended to test using `rbind`)
 - test and train subject data are combined in same way
@@ -69,42 +70,42 @@ The code is well commented for following what's happening and why.  Here is a hi
 ## Data Structures & Variables
 The following data frames are created by the script (in alphabetical order):
 
-- activity (contains `activity_labels.txt`)
-- AlmostTidyData (intermediate for creating final output)
-- combinedDF (intermediate for creating `AmostTidyData`)
-- features (contains `features.txt`)
-- mstd (for mean and sd variables only)
-- nameKey (a convenience feature for referencing new names to original names)
-- newDF (combines the testing and training data)
-- newFeatures (for making the `nameKey`)
-- newSubject (for adding subjects to the combined data frame)
-- newY (for adding the activities to the combined data frame)
-- subject_test (for adding test subjects to `newSubject`)
-- subject_train (for adding training subjects to `newSubject`)
-- testDF (contains `X_test.txt`)
-- tidyData (final output)
-- trainDF (contains `X_train.txt`)
-- y_test (contains `y_test.txt`)
-- y_train (contains `y_train.txt`)
+- *activity* (contains `activity_labels.txt`)
+- *AlmostTidyData* (intermediate for creating final output)
+- *combinedDF* (intermediate for creating `AlmostTidyData`)
+- *features* (contains `features.txt`)
+- *mstd* (for mean and sd variables only)
+- *nameKey* (a convenience feature for referencing new names to original names)
+- *newDF* (combines the testing and training data)
+- *newFeatures* (for making the `nameKey`)
+- *newSubject* (for adding subjects to the combined data frame)
+- *newY* (for adding the activities to the combined data frame)
+- *subject_test* (for adding test subjects to `newSubject`)
+- *subject_train* (for adding training subjects to `newSubject`)
+- *testDF* (contains `X_test.txt`)
+- *tidyData* (final output)
+- *trainDF* (contains `X_train.txt`)
+- *y_test* (contains `y_test.txt`)
+- *y_train* (contains `y_train.txt`)
 
 The following variables are created by the script (in alphabetical order):
 
-- activityName [chr] vector containing activity labels from activity data frame
-- activityNum [int] vector containing the numeric codes from activity data frame
-- badNames [Factor] containing the original variable names from X_test (header)
-- bigBodyNames [chr] used for removing 'BodyBody' typo from variable names
-- bigfNames [chr] used for converting 'f' to 'FFT' in variable names
-- bigGoodNames [chr] used for storing the entire 561 variables after transformations
-- bigMeans [chr] used for converting 'mean' to 'Mean'
-- bigNoPeriods [chr] used for removing internal periods and terminal elipes
-- bigtNames [chr] used for converting 't' to 'Total' in variable names
-- cols2 [chr] used for creating column headers in almostTidyData
-- dots [List] used for aggregating final output
-- legalNames [chr] holds output from `make.names()`
-- namedActivities [chr] holds activities from activityName applied to entire data set
-- newActivityCode [int] hold activity codes from entire data set before converting to names
-- newSubjectCode [int] holds subject codes for entire data set
-- reducedNames [chr] variable names used for mstd data frame used for nameKey
+- *activityName* [chr] vector containing activity labels from activity data frame
+- *activityNum* [int] vector containing the numeric codes from activity data frame
+- *badNames* [Factor] containing the original variable names from X_test (header)
+- *bigBodyNames* [chr] used for removing 'BodyBody' typo from variable names
+- *bigfNames* [chr] used for converting 'f' to 'FFT' in variable names
+- *bigGoodNames* [chr] used for storing the entire 561 variables after transformations
+- *bigMeans* [chr] used for converting 'mean' to 'Mean'
+- *bigNoPeriods* [chr] used for removing internal periods and terminal elipes
+- *bigtNames* [chr] used for converting 't' to 'Total' in variable names
+- *cols2* [chr] used for creating column headers in almostTidyData
+- *dots* [List] used for aggregating final output
+- *legalNames* [chr] holds output from `make.names()`
+- *namedActivities* [chr] holds activities from activityName applied to entire data set
+- *newActivityCode* [int] hold activity codes from entire data set before converting to names
+- *newSubjectCode* [int] holds subject codes for entire data set
+- *reducedNames* [chr] variable names used for mstd data frame used for nameKey
 
 **Note** Many of the data frames and variables in the script are created to preserve intermediate processing steps and could have been eliminated (and would be if this was optimized).  They were left in the code to permit troubleshooting and debugging.  For example, almost all of the Name variables (bigBodyNames, bigfNames, bigtNames, etc) could have been collapsed into a single variable that is reused for each subsequent step.  Elegance and concision were not a priority over working code that was easy to debug.
 
