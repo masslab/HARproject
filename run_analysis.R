@@ -2,6 +2,7 @@
 ##  run_analysis.R      for 'Getting & Cleaning Data' DSCoursera
 ##
 ##  S. Mass / Nov 16, 2014
+##  final versionn Nov 21, 2014
 ##
 #####################################################################
 ##
@@ -31,15 +32,13 @@ if (!"plyr" %in% installed.packages()){
 if (!"dplyr" %in% installed.packages()){
     install.packages("dplyr")
 }else{suppressMessages(library(dplyr))}
-
 ########
+##### Read Files
 ## load feature file
 features <- read.table("UCI HAR Dataset/features.txt", quote="\"")
 ## load activity file
 activity <- read.table("UCI HAR Dataset/activity_labels.txt", quote="\"")
-
-
-######## Read in the test and train data files
+#### Read in the test and train data files
 ### TEST data
 ## load test files
 testDF <- read.table("UCI HAR Dataset/test/X_test.txt", quote="\"")
@@ -56,7 +55,7 @@ subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", quote="\"
 badNames <- features$V2
 ## rename things with valid names & eliminate duplicates
 legalNames <-make.names(badNames, unique=TRUE, allow_ = TRUE)
-## Cleanup the legal names by changing initial 'f' to 'FFT' and 't' to 
+## cleanup the legal names by changing initial 'f' to 'FFT' and 't' to 
 ## 'Total' and eliminating all of the periods and elipses, and 
 ## the 'bodybody" double typo. Change 'mean' to 'Mean' and 'std to 'STD'
 bigtNames <- gsub("^[t]","Total", legalNames)
@@ -67,13 +66,11 @@ bigMeans <- gsub("mean","Mean", bigNoPeriods, fixed=TRUE)
 bigGoodNames <- gsub("std","STD", bigMeans, fixed=TRUE)
 ########
 ### replace variable names in test and train
-## make the header using colnames()
+## make the headers using colnames()
 colnames(testDF) <-bigGoodNames
-## make the header using colnames()
 colnames(trainDF) <-bigGoodNames
 ########
-### Combine the test and train data frames
-## rbind testDF and trainDF
+## Combine the test and train data frames
 newDF <- rbind(testDF, trainDF)
 newSubject <- rbind(subject_test, subject_train)
 newY <- rbind(y_test, y_train)
@@ -92,8 +89,9 @@ reducedNames <- colnames(mstd)
 newFeatures <- features
 newFeatures$newNames <- bigGoodNames
 ## use dplyr 'filter'
-nameKey <- filter(newFeatures, newNames %in% reducedNames)
+nameKey <- data.frame(filter(newFeatures, newNames %in% reducedNames))
 colnames(nameKey) <- c("Col#", "originalName", "newName")
+## end of nameKey code
 ########
 ### add subject and activity vectors as columns to mstd data frame
 ## make vectors 
@@ -109,14 +107,17 @@ combinedDF <- cbind(mstd, Activity = namedActivities, Subject = newSubjectCode)
 ## reorder columns to put activity and subject first
 combinedDF <- combinedDF[c(88,87,1:86)]
 ########
-### Aggregate and create the final tidy data set
+### aggregate and create the final tidy data set
 AlmostTidyData <- group_by(combinedDF, Activity, Subject)
-## the names of the columns you want to summarize
+## the names of the columns to summarize
 cols2 <- names(AlmostTidyData)
 cols2 <- cols2[3:88]
-## the dots component of your call to summarise
-dots <- lapply(cols2, function(x) substitute(mean(x), list(x=as.name(x))))
-tidyData <- do.call(summarise, c(list(.data=AlmostTidyData), dots))
+## the dots component to summarise
+smCall <- lapply(cols2, function(x) substitute(mean(x), list(x=as.name(x))))
+tidyData <- do.call(summarise, c(list(.data=AlmostTidyData), smCall))
+## change column names back to good names -- they get corrupted by the
+## aggregation with parentheses and prepended with 'mean'
+colnames(tidyData) <- names(AlmostTidyData)
 ########
 ### Write files
 ## Create Tidy Directory in Working Directory
@@ -124,10 +125,6 @@ dir.create("tidyFiles")
 ## Write File
 write.table(tidyData, file="tidyFiles/tidyData.txt", row.name=FALSE)
 ## write nameKey
-nameKey <- write.table(nameKey, file="tidyFiles/nameKey.txt", row.name=FALSE)
-###########
-#### END
-###########
-
-
-
+write.table(nameKey, file="tidyFiles/nameKey.txt")
+########### 
+## END
