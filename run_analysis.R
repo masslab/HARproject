@@ -39,14 +39,14 @@ features <- read.table("UCI HAR Dataset/features.txt", quote="\"")
 activity <- read.table("UCI HAR Dataset/activity_labels.txt", quote="\"")
 
 
-######## Read in the test nd train data files
+######## Read in the test and train data files
 ### TEST data
-## load test file
+## load test files
 testDF <- read.table("UCI HAR Dataset/test/X_test.txt", quote="\"")
 y_test <- read.table("UCI HAR Dataset/test/y_test.txt", quote="\"")
 subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", quote="\"")
 ### TRAIN data
-## load test file
+## load train files
 trainDF <- read.table("UCI HAR Dataset/train/X_train.txt", quote="\"")
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", quote="\"")
 subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", quote="\"")
