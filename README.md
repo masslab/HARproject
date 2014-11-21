@@ -67,7 +67,7 @@ The code is well commented for following what's happening and why.  Here is a hi
 - write final output: tidyData.txt
 - write nameKey.txt
 
-## Data Structures & Variables
+## Data Structures & Variables in Script
 The following data frames are created in the script (in alphabetical order):
 
 - *activity* (contains `activity_labels.txt`)
