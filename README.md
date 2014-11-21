@@ -68,7 +68,7 @@ The code is well commented for following what's happening and why.  Here is a hi
 - write nameKey.txt
 
 ## Data Structures & Variables
-The following data frames are created by the script (in alphabetical order):
+The following data frames are created in the script (in alphabetical order):
 
 - *activity* (contains `activity_labels.txt`)
 - *AlmostTidyData* (intermediate for creating final output)
