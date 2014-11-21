@@ -84,7 +84,7 @@ The following variables are created by the script (in alphabetical order):
 ## Data Processing
 The code is well commented for following what's happening and why.  Here is a high level overview:
 
-- Check for `plyr` and `dplyr` packages.  Load or install as necessary.
+- check for `plyr` and `dplyr` packages.  Load or install as necessary.
 - global data for variable names and activities are read into data frames
 - test and train data files are read into data frames
 - original variable names are extracted from features as 'badNames'
@@ -94,7 +94,7 @@ The code is well commented for following what's happening and why.  Here is a hi
 - the 'BodyBody' typo is fixed in some of the variable names using GREP
 - suffixes designating mean and std are capitalized using GREP
 - artifacts from `make.names()` are removed using GREP (periods)
-- colnames is used to assign the good names to the entire 561 variable test and train data sets
+- `colnames` is used to assign the good names to the entire 561 variable test and train data sets
 - test and train data sets are combined (train is appended to test using `rbind`)
 - test and train subject data are combined in same way
 - test and train activity data are combined in same way
@@ -102,8 +102,8 @@ The code is well commented for following what's happening and why.  Here is a hi
 - use dplyr `filter` to create nameKey for only those variables that are included in final data set
 - recode the activity using plyr `mapvalues`
 - `cbind` the activity and subject data to the data frame
-- make an intermediate data frame that is grouped by activity and subject using `group_by`
-- use `lapply` and `summarise` to calculate the averages of each variable by group
+- make an intermediate data frame (almostTidyData) that is grouped by activity and subject using `group_by`
+- use `lapply` and dplyr `summarise` to calculate the averages of each variable by group
 - create subdirectory to contain the output to working directory (tidyFiles)
 - write final output: tidyData.txt
 - write nameKey.txt
@@ -111,7 +111,7 @@ The code is well commented for following what's happening and why.  Here is a hi
 ## Output
 The script creates a tidy data set in wide format that is written to a file named 'tidyData.txt'.  The data set is 88 columns by 180 rows (and is described in detail in the CodeBook).  In addition, a file named 'nameKey.txt' is also written.  This is for cross-referencing the new variable names with their original names (and is also described in detail in the CodeBook).  Both files are written to a subdirectory named 'tidyFiles' which the script creates in the working directory.
 
-### END ###
+
 
 
 
