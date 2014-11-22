@@ -129,7 +129,10 @@ View(nameKeyFile)
 ````
 
 
-
+***
+###### Acknowledgements
+- several worthwhile posts on the Coursera Discussion forum for the course project, especially David Hood's Project FAQ
+- Stackoverflow, too many to mention but especially http://stackoverflow.com/a/21296364/4282130 for a technique using dplyr `summarise`
 
 
 

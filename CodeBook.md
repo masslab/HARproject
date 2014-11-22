@@ -9,15 +9,17 @@ written by S. Mass for JHSPH DSS Coursera 'Getting & Cleaning Data' course
 This project required the creation of a script to perform general clean-up of the UCI HAR dataset, recombining several individual datasets contained therein, reduction of the scope and reorganization of the resulting dataset and then reporting aggregate data. The `run_analysis.R` script cleans-up and renames the variables in the data set (see below for details). It then subsets only the mean and standard deviation data. The output is a reduced dimension aggregate data set that contains means for each activity by each subject.
 
 ### Original Study Design
-The original study used 30 test subjects performing 6 activities while wearing a Samsung Galaxy SII smartphone with an accelerometer and gyroscope.  Data were recorded during the activities to capture 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
+This is very liberally paraphrased from the original data set readme file. 
+
+The original study used 30 test subjects performing 6 activities while wearing a Samsung Galaxy SII smartphone with an accelerometer and gyroscope.  Data were recorded during the activities to capture triaxial linear acceleration and triaxial angular velocity.
 
 For each subject the following data were collected:
 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Total triaxial acceleration (from accelerometer) and the estimated body acceleration.
 - Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
+- 561 variables with time and frequency. 
+- Activity being performed. 
+- Subject identifier.
 
 For more details, see the README.txt file included in the original UCI HAR data set.
 
@@ -26,28 +28,30 @@ The original data in the UCI HAR Data set contains the following files:
 
 - 'README.txt'
 
-- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'features_info.txt': information about the variables used on the feature vector.
 
-- 'features.txt': List of all features (561 variable names).
+- 'features.txt': list of all features (561 variable names).
 
-- 'activity_labels.txt': Links the class labels with their activity name (name-value key with 6 activities).
+- 'activity_labels.txt': a name-value key with 6 activities and their codes.
 
-- 'train/X_train.txt': Training set (feature data for the 561 variables).
+- 'train/X_train.txt': training set (feature data for the 561 variables).
 
-- 'train/y_train.txt': Training labels (activity codes).
+- 'train/y_train.txt': training labels (activity codes).
 
-- 'test/X_test.txt': Test set (feature data for the 561 variables).
+- 'test/X_test.txt': test set (feature data for the 561 variables).
 
-- 'test/y_test.txt': Test labels (activity codes).
+- 'test/y_test.txt': test labels (activity codes).
 
-- 'test/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- 'test/subject_train.txt': rows identify the subject who performed the activity 
 
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- 'train/subject_train.txt': rows identify the subject who performed the activity 
 
 - 'test/Inertial Signals/: **nothing in this subdirectory is used**
 
 - 'train/Inertial Signals/: **nothing in this subdirectory is used**
 
+####Variable Units
+Unit data for measured and calculated variables were not given in the original data set documents.  We are *assuming* that velocity is in m/s, acceleration is in m/s^2 and frequency is in hz (cycles/s).  However, no further mention of units will be made here or in the variable maps.
 
 ## Transformations & Processing
 The following operations are performed:
@@ -200,7 +204,11 @@ The following table maps all of the variables in the `tidyData.txt` file to thei
 |86|559 |angle(X,gravityMean) |angleXgravityMean|[num]1 |
 |87|560 |angle(Y,gravityMean) |angleYgravityMean|[num]1 |
 |88|561 |angle(Z,gravityMean) |angleZgravityMean|[num]1 |
-
+**Note** See *Variable Units* in the *Original Data Set* section above concerning units for variables.
 
 #### nameKey.txt
 This text file was described above in detail and is provided for convenience to enable machine-based cross-referencing of the new transformed variable names in the tidy data with the original variable names. It is essentially the same data represented in the table above without the first column (row numbers corresponding to column numbers in `tidyData.txt`), and without the fifth column (Values).
+
+***
+###### Acknowledgements
+- several worthwhile posts on the Coursera Discussion forum for the course project, especially David Hood's Project FAQ
